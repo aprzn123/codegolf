@@ -12,30 +12,30 @@ Header structure
 
 
 Hardcode working data for now
-6 {} 5 {} 4 {} 3 {} 2 {} 1 {} 3 {} 3 {} 3 {} 3 {} 3; where each {} is four empty cells
+6 {} 5 {} 4 {} 3 {} 2 {} 1 {} 3 {} 3 {} 3 {} 3 {} 3; where each {} is four metadata cells
 
 Each set of empty cells:
-    1: stores the cell number
-    2: stores the current minimum's value
+    1: stores the current minimum's value
+    2: stores the current minimum's position
     3: working memory (used to jump pointer forwards)
-    4: stores the current minimum's position
+    4: working memory
     if we need more working memory we can just shift the next cell over lol
 
 Notation: D(n) represents the nth data cell
           D(n)^^ represents the kth corresponding helper cell for the nth data cell; where k is the number of carats
           Note that n ^ k represents the sum of n and k because the plus symbol is unavailable
 
->   ++++++  > +             >>> value of 6 in D(1)
->   +++++   > ++            >>> value of 5 in D(2)
->   ++++    > +++           >>> and so on
->   +++     > ++++          >>>
->   ++      > +++++         >>>
->   +       > ++++++        >>>
->   +++     > +++++++       >>>
->   +++     > ++++++++      >>>
->   +++     > +++++++++     >>>
->   +++     > ++++++++++    >>>
->   +++     > +++++++++++
+>   ++++++  >>>>
+>   +++++   >>>>
+>   ++++    >>>>
+>   +++     >>>>
+>   ++      >>>>
+>   +       >>>>
+>   +++     >>>>
+>   +++     >>>>
+>   +++     >>>>
+>   +++     >>>>
+>   +++
 
 move ptr to ITER
     +[-<+]- back to MK2
